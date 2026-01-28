@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header class="app-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-wrapper">
+                    <!-- Graduation Cap Icon -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    <h1>Student Flow</h1>
+                </div>
+                <p>Manage your academic journey with elegance.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+
+        <!-- Student Profile Section -->
+        <section class="card glass-card profile-section">
+            <div class="section-header">
+                <h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    Student Profile
+                </h2>
+            </div>
+
+            <div class="profile-content">
+                <!-- Display Mode -->
+                <div id="profile-display" class="profile-details hidden">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <span id="display-initials">--</span>
+                        </div>
+                        <div class="profile-main-info">
+                            <h3 id="display-name">Not set</h3>
+                            <span id="display-school" class="detail-pill">Not set</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats-grid">
+                        <div class="stat-item">
+                            <span class="label">Class</span>
+                            <span id="display-class" class="value">--</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Roll No.</span>
+                            <span id="display-rollno" class="value">--</span>
+                        </div>
+                    </div>
+
+                    <button id="btn-edit-profile" class="btn btn-secondary btn-full">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                        Edit Profile
+                    </button>
+                </div>
+
+                <!-- Edit Mode -->
+                <form id="profile-form" class="profile-form">
+                    <div class="form-group floating">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Student Name</label>
+                    </div>
+                    <div class="form-group floating">
+                        <input type="text" id="school" placeholder=" " required>
+                        <label for="school">School Name</label>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group floating">
+                            <input type="text" id="class" placeholder=" " required>
+                            <label for="class">Class</label>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="text" id="rollno" placeholder=" " required>
+                            <label for="rollno">Roll Number</label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-full">Save Changes</button>
+                        <button type="button" id="btn-cancel-edit" class="btn btn-text btn-full">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Task Manager Section -->
+        <section class="card glass-card task-section">
+            <div class="section-header">
+                <h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 11 12 14 22 4" />
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                    </svg>
+                    Tasks
+                </h2>
+                <span id="task-counter" class="badge">0 Active</span>
+            </div>
+
+            <div class="task-input-wrapper">
+                <input type="text" id="task-input" placeholder="Add a new homework assignment..." aria-label="New task">
+                <button id="btn-add-task" class="btn btn-icon" title="Add Task">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div id="task-list" class="task-list">
+                <!-- Tasks injected here -->
+                <div class="empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                    </svg>
+                    <p>All caught up! No tasks pending.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

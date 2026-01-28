@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# System
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+
+# Optional: Ignore the database if you don't want to share your tasks
+# db.json

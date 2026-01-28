@@ -1,0 +1,40 @@
+{
+  "student": {
+    "name": "Rohan Verma",
+    "school": "IPS Academy, Indore",
+    "class": "4 th year",
+    "rollno": "58670"
+  },
+  "tasks": [
+    {
+      "text": "Complete Math Homework (Chapter 5)",
+      "completed": false,
+      "id": "1769573980334",
+      "timestamp": "2026-01-28T04:19:40.334Z"
+    },
+    {
+      "text": "Prepare Science Project Report",
+      "completed": false,
+      "id": "1769573995462",
+      "timestamp": "2026-01-28T04:19:55.462Z"
+    },
+    {
+      "text": "Revise English Grammar (Tenses)",
+      "completed": false,
+      "id": "1769574005786",
+      "timestamp": "2026-01-28T04:20:05.786Z"
+    },
+    {
+      "text": "Practice DSA Problems (Arrays)",
+      "completed": true,
+      "id": "1769574016534",
+      "timestamp": "2026-01-28T04:20:16.534Z"
+    },
+    {
+      "text": "Read History Chapter – Independence Movement",
+      "completed": true,
+      "id": "1769574025585",
+      "timestamp": "2026-01-28T04:20:25.585Z"
+    }
+  ]
+}
