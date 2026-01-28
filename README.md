@@ -71,13 +71,9 @@ graph TD
 
 ## 📸 Output Screenshots
 
-### **Latest Premium UI**
 > Features: Dark Mode, Glass Cards, SVG Icons, Task Completion State.
 
-![Premium Glassmorphism UI](glassmorphism.png)
-
-### **Original Concept**
-![Original Concept](screenshot.png)
+![Student Task Manager Dashboard](dashboard-preview.png)
 
 ---
 
