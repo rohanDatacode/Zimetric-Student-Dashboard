@@ -1,0 +1,21 @@
+{
+    "name": "zimetric-student-task-manager",
+    "version": "1.0.0",
+    "description": "A comprehensive student task manager and admin dashboard with contact forms and dynamic UI.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "keywords": [
+        "student",
+        "dashboard",
+        "vanilla-js",
+        "glassmorphism"
+    ],
+    "author": "rohanDatacode",
+    "license": "MIT",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "dependencies": {}
+}
