@@ -30,9 +30,9 @@ This application follows a strict **SPA (Single Page Application)** architecture
 
 ```mermaid
 graph TD
-    Client[Browser (Frontend)]
-    Server[Node.js Server (Backend)]
-    DB[(db.json File)]
+    Client["Browser (Frontend)"]
+    Server["Node.js Server (Backend)"]
+    DB[("db.json File")]
 
     Client -- "1. Load Page (GET /)" --> Server
     Server -- "Return HTML/CSS/JS" --> Client
